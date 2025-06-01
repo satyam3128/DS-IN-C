@@ -12,7 +12,7 @@ struct node *Root = NULL;
 struct node *createnode(int value){
     struct node *create_node;
 
-    create_node = (struct node*)malloc(sizeof(struct node));
+    create_node = (struct node*)malloc(sizeof(struct node)) ;
     create_node->left = NULL;
     create_node->data = value;
     create_node->right = NULL;
