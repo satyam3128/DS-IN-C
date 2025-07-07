@@ -7,16 +7,30 @@ struct node {
 struct node *START;
 
 struct node *deletefromEnd(struct node *head){
-    struct node *p,*q;
-    p =head;
-    q = head->next;
+    // Case 1: List is empty
+    if (head == NULL) {
+        printf("List is already empty.\n");
+        return NULL;
+    }
 
-    while(q->next != NULL){
+    // Case 2: List has only one node
+    if (head->next == NULL) {
+        free(head);
+        return NULL;
+    }
+
+    // Case 3: General case (2 or more nodes)
+    struct node *p = head;
+    struct node *q = head->next;
+
+    while (q->next != NULL) {
         p = p->next;
         q = q->next;
     }
+
     p->next = NULL;
     free(q);
+
     return head;
 }
 void traverse(struct node *ptr){
