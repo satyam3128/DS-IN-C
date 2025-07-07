@@ -22,6 +22,7 @@ void traversal(struct node *ptr){
     }
 }
 int count_nodes(struct node *ptr){
+    
     int count = 0;
     while(ptr != NULL){
         count++;
