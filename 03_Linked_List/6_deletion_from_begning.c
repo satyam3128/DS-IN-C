@@ -4,6 +4,7 @@ struct node {
     int data;
     struct node *next;
 };
+
 struct node *START;
 
 struct node *delete(struct node *head){
