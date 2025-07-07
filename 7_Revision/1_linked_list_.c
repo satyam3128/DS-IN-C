@@ -22,13 +22,25 @@ void traversal(struct node *ptr){
     }
 }
 int count_nodes(struct node *ptr){
-    
+
     int count = 0;
     while(ptr != NULL){
         count++;
         ptr = ptr->next;
     }
     return count;
+}
+
+void last_node(struct node *ptr){
+    if(ptr == NULL){
+        printf("\nEmpty linked list");
+        return;
+    }
+    while(ptr ->next != NULL){
+        ptr = ptr->next;
+    }
+    printf("\n%d ",ptr->data);
+
 }
 
 
@@ -41,7 +53,10 @@ int main(){
     first->next =second;
     second->next = third;
     traversal(START);
+    
     printf("\nNO. of Nodes:%d",count_nodes(START));
+
+    last_node(START);
 
     return 0;
 }
