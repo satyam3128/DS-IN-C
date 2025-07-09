@@ -18,7 +18,7 @@ struct node* createNode(int value) {
     return newNode;
 }
 
-// Traverse the list
+// traversal of the circular linked list
 void traverse() {
     if (head == NULL) {
         printf("List is empty\n");
