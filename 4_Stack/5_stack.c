@@ -37,6 +37,18 @@ int pop(struct stack *ptr){
     ptr->top--;
     return temp;
 }
+void display(struct stack *sp){
+    if(!isEmpty(sp)){
+        for(int i = 0;i<=sp->top ;i++){
+            printf("%d ",sp->arr[i]);
+        }
+        printf("\n");
+    }
+    else{
+        printf("Empty stack");
+    }
+    
+}
 
 int main() {
     struct stack *sp;
@@ -57,9 +69,11 @@ int main() {
         scanf("%d",&num);
         push(sp,num);
     }
+    display(sp);
 
     pop(sp);
     pop(sp);
+    display(sp);
 
     free(sp->arr);
     free(sp);
