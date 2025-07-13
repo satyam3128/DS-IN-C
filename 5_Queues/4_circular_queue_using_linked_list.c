@@ -39,6 +39,7 @@ void enqueue(int val)
         }
     }
 }
+// dequeue 
  
 int dequeue()
 {
